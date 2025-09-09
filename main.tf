@@ -17,16 +17,11 @@ resource "aws_instance" "Server-2" {
      availability_zone = "${var.az}"
      instance_type = "${var.instance_type}"
      key_name = "${var.key_pair}"
-     subnet_id = "${aws_subnet.Devsecops-subnet.id}"
-     associate_public_ip_address = true	
-     tags = {
-         Name = "Server-1"
-         Env = "Test"
-     }
 lifecycle {
     create_before_destroy = true
   }
 }
+
 
 
 
