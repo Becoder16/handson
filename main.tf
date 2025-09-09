@@ -11,7 +11,9 @@ terraform {
     region = "us-east-1"
   }
 }
-
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_instance" "Server-2" {
      ami = "${var.ami}"
      availability_zone = "${var.az}"
@@ -21,6 +23,7 @@ lifecycle {
     create_before_destroy = true
   }
 }
+
 
 
 
