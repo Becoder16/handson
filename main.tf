@@ -18,7 +18,6 @@ resource "aws_instance" "Server-1" {
      instance_type = "${var.instance_type}"
      key_name = "${var.key_pair}"
      subnet_id = "${aws_subnet.Devsecops-subnet.id}"
-     vpc_security_group_ids = ["${aws_security_group.Devsecops-sg.id}"]
      associate_public_ip_address = true	
      tags = {
          Name = "Server-1"
@@ -28,5 +27,6 @@ lifecycle {
     create_before_destroy = true
   }
 }
+
 
 
