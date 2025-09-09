@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/SachinJayswal01/Terraform.git'
+                git branch: 'main', url: 'https://github.com/Becoder16/handson.git'
             }
         }
         stage('Plan') {
