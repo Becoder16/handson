@@ -1,8 +1,5 @@
 
 pipeline {
-    options {
-        ansiColor('xterm')
-    }
     environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS-Access-key')
         AWS_SECRET_ACCESS_KEY = credentials('AWS-Secret-access-key')
