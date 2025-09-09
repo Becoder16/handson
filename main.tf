@@ -12,7 +12,7 @@ terraform {
   }
 }
 
-resource "aws_instance" "Server-1" {
+resource "aws_instance" "Server-2" {
      ami = "${var.ami}"
      availability_zone = "${var.az}"
      instance_type = "${var.instance_type}"
@@ -27,6 +27,7 @@ lifecycle {
     create_before_destroy = true
   }
 }
+
 
 
 
